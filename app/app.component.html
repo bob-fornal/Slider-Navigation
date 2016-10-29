@@ -1,0 +1,26 @@
+<wrapper
+  [Structure]="structure"
+  [StartPosition]="startPosition">
+
+  <wr-page
+    [Page]="structure[0][0]"
+    [Horizontal]="0"
+    [Vertical]="0">
+    This is the first page and should be displayed by default.
+  </wr-page>
+
+  <wr-page
+    [Page]="structure[0][1]"
+    [Horizontal]="1"
+    [Vertical]="0">
+    This is the third page and should not be displayed by default, but on click it should slide in ...
+  </wr-page>
+
+  <wr-page
+    [Page]="structure[1][1]"
+    [Horizontal]="1"
+    [Vertical]="1">
+    This is the second page and should not be displayed by default, but on click it should slide in ...
+  </wr-page>
+
+</wrapper>

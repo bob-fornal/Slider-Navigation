@@ -1,0 +1,24 @@
+<div class="wrapper"
+  [ngStyle]="{ 'left': activeStyle.horizontal, 'top': activeStyle.vertical }">
+  <ng-content></ng-content>
+
+  <div class="wr-navigation">
+    <div class="wr-row"
+      *ngFor="let row of structure; let rowIdx = index">
+      <div class="wr-element"
+        [class.active]="element.active"
+        (mouseenter)="enter(element)"
+        (mouseleave)="leave()"
+        *ngFor="let element of row; let elementIdx = index"
+        (click)="element.active && select({ horizontal: elementIdx, vertical: rowIdx })">
+      </div>
+    </div>
+  </div>
+
+  <div class="wr-descriptor">
+    <span *ngIf="hoveredElement.active">
+      {{ hoveredElement.description }}
+    </span>
+  </div>
+
+</div>
