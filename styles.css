@@ -89,21 +89,23 @@ body {
       background-color: rgba(255, 255, 255, 0.5);
       border: 1px solid silver; }
     .wrapper .wr-element.active:not(.selected) {
-      background-color: rgba(255, 0, 0, 0.2);
+      background-color: rgba(109, 148, 161, 0.6);
       border: 1px solid gray; }
       .wrapper .wr-element.active:not(.selected):hover {
-        background-color: rgba(255, 0, 0, 0.8);
-        border: 1px solid black; }
+        background-color: rgba(109, 148, 161, 0.8);
+        border: 1px solid #394e54; }
     .wrapper .wr-element.selected {
-      background-color: rgba(255, 0, 0, 0.8);
-      border: 2px solid black; }
+      background-color: rgba(144, 195, 212, 0.8);
+      border: 2px solid #394e54; }
       .wrapper .wr-element.selected:hover {
-        background-color: red;
-        border: 2px solid black; }
+        background-color: #90c3d4;
+        border: 2px solid #394e54; }
   .wrapper .wr-descriptor {
     bottom: 1em;
+    color: #394e54;
     display: block;
     float: right;
+    font-weight: bold;
     height: 1em;
     position: fixed;
     right: 1em; }
