@@ -53,6 +53,7 @@ body {
     }
   }
   .wr-element {
+    box-sizing: border-box;
     display: inline-block;
     height: 1em;
     width: 1em;
@@ -61,17 +62,26 @@ body {
       margin-right: 0.5em;
     }
 
-    &:not(.active) {
+    &:not(.active):not(.selected) {
       background-color: rgba(255,255,255,0.5);
       border: 1px solid silver;
     }
-    &.active {
+    &.active:not(.selected) {
       background-color: rgba(255,0,0,0.2);
       border: 1px solid gray;
 
       &:hover {
         background-color: rgba(255,0,0,0.8);
         border: 1px solid black;
+      }
+    }
+    &.selected {
+      background-color: rgba(255,0,0,0.8);
+      border: 2px solid black;
+
+      &:hover {
+        background-color: rgba(255,0,0,1.0);
+        border: 2px solid black;
       }
     }
 
