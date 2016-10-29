@@ -79,24 +79,33 @@ body {
     .wrapper .wr-row:last-of-type {
       margin-bottom: 1.5em; }
   .wrapper .wr-element {
+    box-sizing: border-box;
     display: inline-block;
     height: 1em;
     width: 1em; }
     .wrapper .wr-element:not(:last-of-type) {
       margin-right: 0.5em; }
-    .wrapper .wr-element:not(.active) {
+    .wrapper .wr-element:not(.active):not(.selected) {
       background-color: rgba(255, 255, 255, 0.5);
       border: 1px solid silver; }
-    .wrapper .wr-element.active {
-      background-color: rgba(255, 0, 0, 0.2);
+    .wrapper .wr-element.active:not(.selected) {
+      background-color: rgba(109, 148, 161, 0.6);
       border: 1px solid gray; }
-      .wrapper .wr-element.active:hover {
-        background-color: rgba(255, 0, 0, 0.8);
-        border: 1px solid black; }
+      .wrapper .wr-element.active:not(.selected):hover {
+        background-color: rgba(109, 148, 161, 0.8);
+        border: 1px solid #394e54; }
+    .wrapper .wr-element.selected {
+      background-color: rgba(144, 195, 212, 0.8);
+      border: 2px solid #394e54; }
+      .wrapper .wr-element.selected:hover {
+        background-color: #90c3d4;
+        border: 2px solid #394e54; }
   .wrapper .wr-descriptor {
     bottom: 1em;
+    color: #394e54;
     display: block;
     float: right;
+    font-weight: bold;
     height: 1em;
     position: fixed;
     right: 1em; }

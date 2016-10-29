@@ -7,6 +7,7 @@
       *ngFor="let row of structure; let rowIdx = index">
       <div class="wr-element"
         [class.active]="element.active"
+        [class.selected]="activePosition.horizontal === elementIdx && activePosition.vertical === rowIdx"
         (mouseenter)="enter(element)"
         (mouseleave)="leave()"
         *ngFor="let element of row; let elementIdx = index"
